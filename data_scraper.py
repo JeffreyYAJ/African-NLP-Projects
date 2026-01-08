@@ -1,22 +1,27 @@
 from gnews import GNews
 import pandas as pd
+import os 
 
-google_news = GNews(language='fr', country='CM') # Focus sur le Cameroun
+data_folder = "data"
+try:
+    os.mkdir(data_folder)
+except FileExistsError:
+    pass
+google_news = GNews(language = 'fr', country = 'CM')
 
 def collect_data(queries, label):
-    all_articles = []
-    for q in queries:
-        articles = google_news.get_news(q)
-        for art in articles:
-            all_articles.append({'text': art['title'], 'category': label})
-    return all_articles
+  articles_list = []
+  for q in queries:
+    articles = google_news.get_news(q)
+    for a in articles:
+      articles_list.append({'text': a['title'], 'category': label})
+  return articles_list
 
-# On définit nos classes pour le NLP
-politics = collect_data(['politique Cameroun', 'élections Afrique', 'gouvernement'], 'Politique')
-sports = collect_data(['Lions Indomptables', 'CAN 2025', 'Football Afrique'], 'Sport')
-economy = collect_data(['Bourse Afrique', 'Économie Cameroun', 'Investissement'], 'Economie')
 
-# Création du Dataset
+politics = collect_data(['Politique Cameroun', 'elections Afrique', 'gouvernement'],'Politique')
+sports = collect_data(['Football Afrique', 'CAN'], 'Sport')
+economy = collect_data(['Bourse Afrique', 'Investissement Afrique','Crise Economique Afrique'], 'Economy')
+
 df = pd.DataFrame(politics + sports + economy)
-df.to_csv('african_news_dataset.csv', index=False)
-print(f"Dataset créé avec {len(df)} titres !")
+df.to_csv('data/africa_news.csv', index=False)
+print(f"Dataset Created {len(df)} titres")

@@ -2,3 +2,4 @@ gnews
 pandas
 scikit-learn
 
+nltk
