@@ -32,6 +32,6 @@ def clean_text(text):
     return " ".join(cleaned_words)
 
 df = pd.read_csv('data/africa_news.csv')
-df['text'] = df['text'].apply(clean_text)
+df['clean_text'] = df['text'].apply(clean_text)
 df.to_csv('data/africa_news_cleaned.csv', index=False)
 print("Dataset cleaned")
