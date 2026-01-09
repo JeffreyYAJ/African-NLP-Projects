@@ -1,5 +1,6 @@
 gnews
 pandas
 scikit-learn
-
+seaborn
 nltk
+matplotlib
