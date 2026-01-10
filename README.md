@@ -53,7 +53,7 @@ The model was evaluated on a test set and produced the following.
    ```bash
    pip install -r requirements.txt
    ```
-Run the pipeline: You can explore the steps in the Jupyter Notebook located in the notebooks/ folder.
+Run the pipeline from the jupyter notebook.
 
 ## Tools Used
 - Pandas: Data manipulation.
