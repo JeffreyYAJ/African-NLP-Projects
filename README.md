@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-orange)](https://scikit-learn.org/)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](INSERT_YOUR_COLAB_LINK_HERE)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Tfk-FDwBi8fbPFVr8LYBI-ub7LOT_bR5#scrollTo=1fCBNXeZzxIo)
 
 ##  Project Overview
  This project implements an **end-to-end Machine Learning pipeline** to categorize news articles relevant to the Central African region (in this case Cameroon) into distinct classes: *Politics, Economy, Sports, ...*.
